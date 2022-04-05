@@ -1,0 +1,258 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage{bibentry}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lipsum}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage[
+    hidelinks
+]{hyperref}
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+
+
+\makeatletter
+\begingroup
+  \catcode`\$=6 %
+  \catcode`\#=12 %
+  \gdef\href@split$1#$2#$3\\$4{%
+    \hyper@@link{$1}{$2}{\uline{$4}}% or \underline
+    \endgroup}%
+\endgroup
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+\usepackage{lastpage}
+\rfoot{\thepage/\pageref{LastPage}}
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{#2 \vspace{-5pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \vspace{-1pt}
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\projectHeading}[2]{
+\vspace{-1pt}
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-6pt}
+
+
+
+
+
+}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{1pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \multirow{2}{*}{\textbf{\LARGE Varad Vaidya}} &  \href{mailto:vaidyavarad2001@gmail.com}{vaidyavarad2001@gmail.com}\\
+                               & \href{https://github.com/varadVaidya}{GitHub: varadVaidya} \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeHeading
+      {Visvesvaraya National Institute of Technology}{Nagpur, India}
+      {B.Tech in Mechanical Engineering; CGPA: 8.66}{July 2018 -- May 2022}
+
+
+%-----------EXPERIENCE-----------------
+\section{Research Experience}
+ 
+%------------------ IITD Internship -------------------
+    \resumeHeading
+      {Obstacle Avoidance using Dynamic Motion Primitives}{Indian Institute of Technology, Delhi}
+      {Research Intern}{Apr. 2021 --- Oct. 2021}
+      \resumeItemListStart
+        \resumeItem{}
+          {Implemented Cartesian and joint space dynamic motion primitives on Kuka LBR iiwa in PyBullet for movement reproduction of complex trajectories}
+        \resumeItem{}
+          {Extended the formulation to include orientation based motion primitives using quaternions for singularity free representation, and demonstrated the spatial and temporal scalability of the system}
+        \resumeItem{}
+          {Implemented Static and Dynamic Potential Fields to avoid multiple stationery and moving obstacles}
+        \resumeItem{}{Reduced the error in the motion primitive's trajectory by extrapolating the obstacle's position and checking its collision with the robot's motion}
+      \resumeItemListEnd
+
+%-------------- IISc Internship -----------------------
+
+    \resumeHeading
+        {Control of Flexible Manipulator using Deep Reinforcement Learning}{IISc, Bengaluru}
+        {Research Intern}{Dec. 2021 --- Present}
+        
+        \resumeItemListStart
+            \resumeItem{}{Studied Reinforcement and Deep Learning to implement Deep Reinforcement Algorithms such as DQN and DDPG on OpenAI and PyBullet environments using pytorch}
+            \resumeItem{}{Creating a custom environment to handle dynamics of flexible manipulators }
+        \resumeItemListEnd
+\vspace{-3mm} % remove some vertical space
+%----------- PUBLICATIONS--------------------------
+\nobibliography{ref}
+ \bibliographystyle{ieeetr}
+\section{Publications}
+
+    \resumeItemListStart
+        \resumeItem{}{\bibentry{sahayak}}
+    \resumeItemListEnd
+
+
+
+%-----------PROJECTS-------------------------------
+\section{Projects}
+%%%%%%%%%%__________VIiLocNAV________%%%%%%%%%%%%%%%%%%%%%%
+
+    \projectHeading
+        {Visual Learning-based Optimal Control and Navigation}{Jan. 2022 --- Present}
+        \resumeItemListStart
+            \resumeItem{}{Created a custom PyBullet environment with Turtlebot2 in PyBullet and implemented PID and iLQR control to reach a provided waypoint}
+            \resumeItem{}{Integrating iGibson dataset with our control architecture to enable realistic rendering and interaction with environments}
+        \resumeItemListEnd
+        
+%%%%%%%________SAHAYAK___________%%%%%%%%%%%%%%%%%%
+    \projectHeading
+        {Sahayak-v3: Product Design}{Dec. 2020 --- Mar. 2021}
+        \resumeItemListStart
+            \resumeItem{}{Designed the cyber-physical architecture of Sahayak COVID aid bot for autonomous capabilities}
+            \resumeItem{}{Modified the CAD model of Sahayak-v2 for robust locomotion in SolidWorks and selected the components mathcing the requirements}
+            \resumeItem{}{Added senor models to CAD model and converted entire robot stack to URDF for simulation in Gazebo}
+        \resumeItemListEnd        
+%%%%%%%%%%--------- FORCE CONTROL----------%%%%%%%%%%%
+
+    \projectHeading
+        {Force Control of Manipulators}{Jan. 2021 --- Apr. 2021}
+        \resumeItemListStart
+            \resumeItem{}{Applied stiffness and kinematic control of planar 2DOF manipulator in Python from scratch}
+            \resumeItem{}{Wrote a custom wrapper over PyBullet for robotic manipulators for ease of control, trajectory generation and planning, using SLERP for quaternion interpolation}
+            \resumeItem{}{Implemented force control methods like computed torque control and impedance control on UR5 in PyBullet}
+        \resumeItemListEnd
+
+%%%%%%%%%%%%_____________ youBot_____________%%%%%%%%%%%  
+    \projectHeading
+        {Mobile Manipulation using Kuka youBot}{Oct. 2020 --- Nov. 2020}
+        \resumeItemListStart
+            \resumeItem{}{Designed end-effector trajectory using cubic splines and rotation matrix interpolation for a cube to be picked and placed between two locations}
+            \resumeItem{}{Simulated the kinematics of youBot wheeled manipulator, controlled using PI controller, in Python and visualised in CoppeliaSim}
+        \resumeItemListEnd
+\newpage
+%%%%%%%%%___________ 2ARM QUADROTOR________________%%%%%%%
+    \projectHeading
+        {2 Arm Quadcopter Balance}{Feb. 2020 --- Mar. 2020}
+        \resumeItemListStart
+            \resumeItem{}{Designed and manufactured a two arm balance for quadcopter balancing using PID control}
+            \resumeItem{}{Used MPU 9250 IMU with Arduino Uno to provide PWM signals to BLDC motors}
+            \resumeItem{}{Implemented complementary filter to provide accurate estimate of the pitch of the system}
+        \resumeItemListEnd
+
+%%%%___________Trajectory generation of planr quadrotor_______________%%%%%%%%%%
+
+    \projectHeading
+        {Dynamic Modelling of Quadcopter}{Mar. 2020 --- July. 2020}
+        \resumeItemListStart
+            \resumeItem{}{Developed a dynamic model of quadcopter in MATLAB controlled using PID controller}
+            \resumeItem{}{Implemented a planar quadrotor model in Python from scratch to follow minimum velocity, acceleration and jerk trajectories for point to point navigation}
+        \resumeSubHeadingListEnd
+\vspace{-3mm}
+% --------SKILLS------------
+\section{Skills}
+    \resumeSubHeadingListStart
+        \resumeItem{Programming: }{Python, C, MATLAB, Simulink, \LaTeX}
+        \resumeItem{Tools and Software: }{Linux, PyBullet, SolidWorks, OnShape, PyTorch, ANSYS, ROS, Arduino}
+        \resumeItem{Misc: }{Git/GitHub, Adobe LightRoom}
+    \resumeSubHeadingListEnd
+%%%%_____ RELEVENT COURSEWORK_________%%%%%%%%%%%
+\section{Relevant Coursework}
+    \resumeSubHeadingListStart
+        \resumeItem{MOOC: }{\href{https://coursera.org/share/ea3f882b4fcd497819e00607c1e7be82}{Aerial Robotics}, \href{https://coursera.org/share/5d302e73bc18fe9fe2ff152a5bac61ff}{Modern Robotics: Mechanics, Planning, and Control}}
+        \resumeItem{Mechanical: }{Industrial Robotics, Control Systems, Finite Element Method, Theorey of Machines I and II}
+        \resumeItem{Mathematics: }{Statistical Analysis and Queuing Theory, Integral Transforms and Partial Differential Equations}
+    \resumeSubHeadingListEnd
+
+\section{ExtraCurricular}
+    \projectHeading{Project Head, IvLabs, VNIT Nagpur}{May. 2020 --- Jul. 2021}
+    \resumeSubHeadingListStart
+        \resumeItem{}{Led the student body responsible for deciding summer projects for sophomore students}
+        \resumeItem{}{Conducted IEEE workshops on SolidWorks and Basic Electronics}
+        \resumeItem{}{Guided summer projects related to Control and Dynamics at IvLabs}
+    \resumeSubHeadingListEnd
+%-------------------------------------------
+\end{document}
